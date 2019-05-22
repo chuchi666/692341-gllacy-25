@@ -9,19 +9,25 @@
       <nav class="main-navigation" aria-label="Навигация по сайту">
         <img src="img/logo.svg" width="154" height="64" alt="Логотип Глэйси">
         <ul class="site-navigation">
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="#">Доставка и оплата</a></li>
-          <li><a href="#">О Компании</a></li>
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="catalog.html">Каталог</a>
+          </li>
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="#">Доставка и оплата</a>
+          </li>
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="#">О Компании</a>
+          </li>
         </ul>
         <ul class="user-navigation">
-          <li class="search">
-            <a href="#"><img src="img/loupe.svg" width="17" height="17" alt="Поиск"></a>
+          <li class="user-navigation__item search">
+            <a class="user-navigation__link" href="#"><img src="img/loupe.svg" width="17" height="17" alt="Поиск"></a>
           </li>
-          <li class="login">
-            <a href=""><img src="img/entrance.svg" width="21" height="19" alt="#">Вход</a>
+          <li class="user-navigation__item login">
+            <a class="user-navigation__link" href=""><img src="img/entrance.svg" width="21" height="19" alt="#">Вход</a>
           </li>
-          <li class="basket">
-            <a href=""><img src="img/basket.svg" width="21" height="20" alt="#">Корзина</a>
+          <li class="user-navigation__item basket">
+            <a class="user-navigation__link" href=""><img src="img/basket.svg" width="21" height="20" alt="#">Корзина</a>
           </li>
         </ul>
       </nav>
@@ -51,19 +57,19 @@
         <h2 class="visually-hidden">Преимущества</h2>
         <p class="features-lead">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
         <ul class="features-list">
-          <li class="features-item">
+          <li class="features-list__item">
             <img src="img/ice-cream.svg" width="49" height="49" alt="#">
             <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
           </li>
-          <li class="features-item">
+          <li class="features-list__item">
             <img src="img/eco.svg" width="49" height="49" alt="#">
             <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.<p>
           </li>
-          <li class="features-item">
+          <li class="features-list__item">
             <img src="img/cow.svg" width="49" height="49" alt="#">
             <p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
           </li>
-          <li class="features-item">
+          <li class="features-list__item">
             <img src="img/thermometer.svg" width="49" height="49" alt="#">
             <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.<p>
           </li>
@@ -88,42 +94,44 @@
       </section>
     </main>
     <footer class="main-footer">
-      <div class="social-networks">
-        <ul>
-          <li>
-            <a class="social-button social-button-tw" href="#" aria-label="Ссылка на Twitter">
-              <img src="img/twitter.svg" width="32" height="32" alt="Twitter">
-            </a>
-          </li>
-          <li>
-            <a class="social-button social-button-inst" href="#" aria-label="Ссылка на Instagram">
-              <img src="img/instagram.svg" width="32" height="32" alt="Instagram">
-            </a>
-          </li>
-          <li>
-            <a class="social-button social-button-fb" href="#" aria-label="Ссылка на страницу Facebook">
-              <img src="img/fb.svg" width="32" height="32" alt="Facebook">
-            </a>
-          </li>
-          <li>
-            <a class="social-button social-button-vk" href="#" aria-label="Ссылка на группу Вконтакте">
-              <img src="img/vk.svg" width="32" height="32" alt="Вконтакте">
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="additional-info">
-        <ul>
-          <li class="additional-info-chosen">
-            <a href="#"><img src="img/heart.svg" width="15" height="13" alt="#">Для поставщиков</a>
-          </li>
-          <li><a href="#">О производстве</a></li>
-          <li><a href="#">Наши документы</a></li>
-          <li><a href="#">Экологические стандарты</a></li>
-        </ul>
-      </div>
-      <p class="footer-copyright">
-        <a class="htmlacademy-logo"  href="https://htmlacademy.ru/intensive/htmlcss">
+      <ul class="main-footer__social social">
+        <li class="social__item">
+          <a class="social__link social__link--Twitter" href="#" aria-label="Ссылка на Twitter">
+            <img src="img/twitter.svg" width="32" height="32" alt="Twitter">
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--Instagram" href="#" aria-label="Ссылка на Instagram">
+            <img src="img/instagram.svg" width="32" height="32" alt="Instagram">
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--Facebook" href="#" aria-label="Ссылка на страницу Facebook">
+            <img src="img/fb.svg" width="32" height="32" alt="Facebook">
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--Вконтакте" href="#" aria-label="Ссылка на группу Вконтакте">
+            <img src="img/vk.svg" width="32" height="32" alt="Вконтакте">
+          </a>
+        </li>
+      </ul>
+      <ul class="additional-info">
+        <li class="additional-info__item additional-info__item--active">
+          <a class="additional-info__link" href="#"><img src="img/heart.svg" width="15" height="13" alt="#">Для поставщиков</a>
+        </li>
+        <li class="additional-info__item">
+          <a class="additional-info__link"  href="#">О производстве</a>
+        </li>
+        <li class="additional-info__item">
+          <a class="additional-info__link"  href="#">Наши документы</a>
+        </li>
+        <li class="additional-info__item">
+          <a class="additional-info__link"  href="#">Экологические стандарты</a>
+        </li>
+      </ul>
+      <p class="main-footer__copyright copyright">
+        <a class="copyright__link hmlacademy-logo"  href="https://htmlacademy.ru/intensive/htmlcss">
           <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Academy">
         </a>
         <span>Сделано в <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &#169; 2019</span>
