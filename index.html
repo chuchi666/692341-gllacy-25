@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Глэйси: магазин мороженого</title>
+    <style type="text/css">body {
+      background-color: #9dac9b; }</style>
   </head>
   <body>
     <header class="main-header">
@@ -27,7 +29,7 @@
             <a class="user-navigation__link" href=""><img src="img/entrance.svg" width="21" height="19" alt="#">Вход</a>
           </li>
           <li class="user-navigation__item basket">
-            <a class="user-navigation__link" href=""><img src="img/basket.svg" width="21" height="20" alt="#">Корзина</a>
+            <a class="user-navigation__link" href=""><img src="img/basket.svg" width="21" height="20" alt="#">Пусто</a>
           </li>
         </ul>
       </nav>
@@ -40,6 +42,20 @@
       <h1 class="visually-hidden">Интернет-магазин мороженого Глэйси</h1>
       <section class="slider">
         <h2 class="visually-hidden">Слайдер</h2>
+        <ul class="slider__list">
+          <li class="slider__item">
+            <p>Крем-брюле и пломбир с малиновым джемом</p>
+            <a class="button slider__button" href="#">Давайте оба!</a>
+          </li>
+          <li class="slider__item">
+            <p>Щоколадный пломбир и лимонный сорбет</p>
+            <a class="button slider__button" href="#">Давайте оба!</a>
+          </li>
+          <li class="slider__item">
+            <p>Пломбир с помадкой и клубничный щербет</p>
+            <a class="button slider__button" href="#">Давайте оба!</a>
+          </li>
+        </ul>
       <!-- Здесь будет находиться слайдер -->
       </section>
 
@@ -55,7 +71,7 @@
 
       <section class="features">
         <h2 class="visually-hidden">Преимущества</h2>
-        <p class="features-lead">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
+        <h3 class="features-lead">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h3>
         <ul class="features-list">
           <li class="features-list__item">
             <img src="img/ice-cream.svg" width="49" height="49" alt="#">
@@ -84,16 +100,28 @@
       <section class="subscription">
         <h2 class="visually-hidden">Подписка</h2>
         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-      <!-- Здесь будет находиться форма -->
-      </section>
-
-      <section class="contacts">
-        <h2 class="visually-hidden">Контакты</h2>
-        <img src="img/map.jpg" alt="Адрес офлайн магазина: город Санкт-Петербург, улица Большая Конюшенная 19/8">
-      <!-- Здесь будут контакты и карта -->
+        <form class="subscription__form" action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label class="visually-hidden" for="user-email">Электронная почта</label>
+            <input class="subscription__input" id="user-email" type="text" name="email" placeholder="Электронная почта">
+          </p>
+          <button class="subscription__submit-button button" type="submit">Отправить</button>
+        </form>
       </section>
     </main>
     <footer class="main-footer">
+      <section class="main-footer__map">
+        <h2 class="visually-hidden">Контакты</h2>
+        <img src="img/map.jpg" alt="Адрес офлайн магазина: город Санкт-Петербург, улица Большая Конюшенная 19/8">
+      </section>
+      <section class="main-footer__contacts contacts">
+        <h3>Адрес главного офиса и офлайн-магазина:</h3>
+        <p class="contacts__adress">ул. Б. Конюшенная, д. 19/8, Санкт-Петербург</p>
+        <p>Для заказов по телефону:</p>
+        <a class="contacts__telephone-number" href="tel:+78122757575">8 812 450-25-25</a>
+        <p>(с 10 до 20 ежедневно)</p>
+        <a class="contacts__button button" href="#">Форма обратной связи</a>
+      </section>
       <ul class="main-footer__social social">
         <li class="social__item">
           <a class="social__link social__link--Twitter" href="#" aria-label="Ссылка на Twitter">
@@ -130,12 +158,70 @@
           <a class="additional-info__link"  href="#">Экологические стандарты</a>
         </li>
       </ul>
-      <p class="main-footer__copyright copyright">
-        <a class="copyright__link hmlacademy-logo"  href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Academy">
-        </a>
-        <span>Сделано в <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &#169; 2019</span>
-      </p>
+      <a class="main-footer__copyright copyright"  href="https://htmlacademy.ru/intensive/htmlcss">
+        <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Academy">
+        <p>Сделано в HTML Academy  &#169; 2019</p>
+      </a>
     </footer>
+    <ul class="catalog-navigation-modal-window visually-hidden">
+      <li class="catalog-navigation__item">
+        <a class="catalog-navigation__link--novelty" href="#">Новинки</a>
+      </li>
+      <li class="catalog-navigation__item">
+        <a class="catalog-navigation__link" href="catalog.html">Сливочное</a>
+      </li>
+      <li class="catalog-navigation__item">
+        <a class="catalog-navigation__link--active" href="#">Щербеты</a>
+      </li>
+      <li class="catalog-navigation__item">
+        <a class="catalog-navigation__link" href="#">Фруктовый лед</a>
+      </li>
+      <li class="catalog-navigation__item">
+        <a class="catalog-navigation__link" href="#">Мелорин</a>
+      </li>
+    </ul>
+    <section class="search-modal-window visually-hidden">
+      <form class="search-modal-window__form search-form" action="https://echo.htmlacademy.ru" method="post">
+        <label class="visually-hidden" for="search">Поиск по сайту</label>
+        <input class="search-modal-window__input" id="search" type="search" name="search" placeholder="Что ищем?">
+      </form>
+    </section>
+    <section class="login-modal-window visually-hidden">
+      <h2 class="visually-hidden">Личный кабинет</h2>
+      <form class="login-modal-window__form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label class="visually-hidden" for="user-login">Электронная почта</label>
+          <input class="login-modal-window__input" id="user-login" type="text" name="login" placeholder="Электронная почта">
+        </p>
+        <p>
+          <label class="visually-hidden" for="user-password">Пароль</label>
+          <input class="login-modal-window__input" id="user-password" type="password" name="password" placeholder="Пароль">
+        </p>
+        <a class="login-modal-window__link" href="#">Забыли пароль?</a>
+        <a class="login-modal-window__link" href="#">Новая регистрация</a>
+        <button class="button" type="submit">
+          Войти
+        </button>
+      </form>
+    </section>
+    <section class="feedback-modal-window visually-hidden">
+      <h2>Мы обязательно вам ответим!</h2>
+      <form class="feedback-modal-window__form feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label class="visually-hidden" for="user-name">Ваше имя:</label>
+          <input class="feedback-modal-window__input" id="user-name" type="text" name="username" placeholder="Как вас зовут?">
+        </p>
+        <p>
+          <label class="visually-hidden" for="user-email">Ваш e-mail:</label>
+          <input class="feedback-modal-window__input" id="user-email" type="text" name="email" placeholder="Ваша почта для ответа?">
+        </p>
+        <p>
+          <label class="visually-hidden" for="message">Текст письма:</label>
+          <textarea class="feedback-modal-window__textarea" id="message" name="message" rows="4"  placeholder="Напишите что-нибудь..."></textarea>
+        </p>
+        <button class="feedback-modal-window__submit-button button" type="submit">Отправить</button>
+      </form>
+      <button class="feedback-modal-window__close-button" type="button">Закрыть</button>
+    </section>
   </body>
 </html>
