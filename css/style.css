@@ -44,6 +44,7 @@ body {
   font-weight: 500;
   color: #ffffff;
   background-color: #849d8f;
+  min-width: 1200px;
 }
 
 a {
@@ -154,6 +155,7 @@ img {
   width: 21px;
   height: 19px;
   background-image: url('../img/entrance.svg');
+  margin-right: 10px;
 }
 
 .basket__link::before {
@@ -240,7 +242,7 @@ img {
   line-height: 28px;
 }
 
-.features {
+.features__container {
   color: #323232;
 
   background-image: url(../img/wafer.png);
@@ -250,16 +252,15 @@ img {
 .features__lead {
   font-size: 24px;
   line-height: 30px;
-}
-
-.features__list {
-  list-style: none;
-  font-weight: 400;
+  padding-left: 21px;
+  padding-top: 31px;
+  margin: 0 0;
 }
 
 .features__item::before {
   width: 49px;
   height: 49px;
+  padding-right: 58px;
 }
 
 .features__item--ice-cream::before {
@@ -385,6 +386,10 @@ img {
   list-style: none;
 }
 
+.breadcrumbs__item {
+  margin-right: 20px;
+}
+
 .breadcrumbs__item a {
   border-bottom: 1px solid #ffffff;
 }
@@ -415,4 +420,233 @@ img {
 .pagination__item--current {
   color: #000000;
   background-color: #ffffff;
+}
+
+/* Строим сетку */
+
+.main-header {
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 27px;
+
+  width: 1200px;
+}
+
+.main-header,
+.main-header__navigation,
+.main-footer {
+  display: flex;
+}
+
+.main-header__navigation {
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 1160px;
+  margin-top: 10px;
+}
+
+.main-navigation__container {
+  display: flex;
+  justify-content: space-between;
+  width: 950px;
+}
+
+.site-navigation,
+.user-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.site-navigation__item:first-child {
+  padding-left: 21px;
+}
+
+.site-navigation__item:not(:last-child) {
+  padding-right: 28px;
+}
+
+.site-navigation__link {
+  border-bottom: 1px solid #a1b4a9;
+}
+
+.user-navigation__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.user-navigation__link {
+  display: flex;
+}
+
+.main-header__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  padding: 0;
+  /* временно, пока нет слайдера */
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.page-main__slider {
+  margin-bottom: 40px;
+
+  /* временно для сетки */
+  min-height: 209px;
+}
+
+.promotions__list,
+.container__list {
+  list-style: none;
+}
+
+
+.promotions__item {
+  width: 560px;
+  height: 230px;
+}
+
+.promotions__list,
+.bestsellers__list,
+.catalog__list,
+.container__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.bestsellers__item,
+.catalog__item {
+  margin-bottom: 33px;
+  margin-right: 26px;
+
+  width: 267px;
+
+  /* временно для сетки */
+  min-height: 325px;
+}
+
+.bestsellers__item:nth-child(4n),
+.catalog__item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.page-main__features {
+  margin-bottom: 40px;
+  padding-top: 25px;
+
+  /* временно для сетки */
+  min-height: 305px;
+}
+
+.features-lead {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  padding-right: 20px;
+
+  /* временно для сетки */
+  min-height: 63px;
+}
+
+/* .features-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+} */
+
+.features__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  font-weight: 400;
+  margin: 0;
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 32px;
+}
+
+.features__item {
+  margin-bottom: 28px;
+  display: flex;
+  max-width: 488px;
+}
+
+
+.page-main__blog,
+.page-main__subscription {
+  width: 560px;
+  height: 220px;
+}
+
+.main-footer {
+  margin-top: 18px;
+
+  /* временно для сетки */
+  min-height: 85px;
+}
+
+.main-footer__map {
+  width: 1200px;
+  min-height: 430px;
+}
+
+.main-footer__contacts {
+  margin-left: -27px;
+
+  width: 1200px;
+  min-height: 430px;
+}
+
+.main-footer__social {
+  display: flex;
+
+  width: 267px;
+
+  /* временно для сетки */
+  min-height: 40px;
+}
+
+.main-footer__additional {
+  display: flex;
+
+  margin: 0;
+
+  width: 560px;
+}
+
+.main-footer__copyright {
+  display: flex;
+
+  width: 267px;
+}
+
+.page-main__breadcrumbs {
+  display :flex;
+  flex-direction: row;
+}
+
+/* микросетка */
+
+.header-info {
+  padding-right: 180px;
+}
+
+.price__amount {
+  padding-top: 50px;
 }

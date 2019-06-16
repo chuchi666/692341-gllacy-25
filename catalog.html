@@ -8,95 +8,95 @@
   </head>
   <body>
     <header class="main-header">
-        <nav class="main-header__navigation main-navigation" aria-label="Навигация по сайту">
-        <a class="main-header__logo">
-          <img class="main-header__logo--image" src="img/logo.svg" width="154" height="64" alt="Логотип Глэйси">
-        </a>
-        <ul class="site-navigation">
-          <li class="site-navigation__item site-navigation__item--active catalog-navigation">
-            <a class="site-navigation__link" href="catalog.html">Каталог</a>
-            <ul class="catalog-navigation__modal-window">
-              <li class="catalog-navigation__item">
-                <a class="catalog-navigation__link--novelty" href="#">Новинки</a>
-              </li>
-              <li class="catalog-navigation__item">
-                <a class="catalog-navigation__link" href="catalog.html">Сливочное</a>
-              </li>
-              <li class="catalog-navigation__item">
-                <a class="catalog-navigation__link--active" href="#">Щербеты</a>
-              </li>
-              <li class="catalog-navigation__item">
-                <a class="catalog-navigation__link" href="#">Фруктовый лед</a>
-              </li>
-              <li class="catalog-navigation__item">
-                <a class="catalog-navigation__link" href="#">Мелорин</a>
-              </li>
-            </ul>
-          </li>
-          <li class="site-navigation__item">
-            <a class="site-navigation__link" href="#">Доставка и оплата</a>
-          </li>
-          <li class="site-navigation__item">
-            <a class="site-navigation__link" href="#">О Компании</a>
-          </li>
-        </ul>
-        <ul class="user-navigation">
-          <li class="user-navigation__item search">
-            <a class="user-navigation__link icon-before search__link" href="#"></a>
-            <form class="search__form" action="https://echo.htmlacademy.ru" method="post">
-              <label class="visually-hidden" for="search">Поиск по сайту</label>
-              <input class="search__input" id="search" type="search" name="search" placeholder="Что ищем?">
-            </form>
-          </li>
-          <li class="user-navigation__item login">
-            <a class="user-navigation__link icon-before login__link" href="">Вход</a>
-            <section class="login__modal-window">
-              <h2 class="visually-hidden">Личный кабинет</h2>
-              <form class="login__form" action="https://echo.htmlacademy.ru" method="post">
-                <p>
-                  <label class="visually-hidden" for="user-login">Электронная почта</label>
-                  <input class="login__input" id="user-login" type="text" name="login" placeholder="Электронная почта">
-                </p>
-                <p>
-                  <label class="visually-hidden" for="user-password">Пароль</label>
-                  <input class="login__input" id="user-password" type="password" name="password" placeholder="Пароль">
-                </p>
-                <a class="login__link" href="#">Забыли пароль?</a>
-                <a class="login__link" href="#">Новая регистрация</a>
-                <button class="button" type="submit">Войти</button>
+      <nav class="container main-header__navigation main-navigation" aria-label="Навигация по сайту">
+        <img class="main-header__logo--image"  src="img/logo.svg" width="154" height="64" alt="Логотип Глэйси">
+        <div class="main-navigation__container">
+          <ul class="site-navigation">
+            <li class="site-navigation__item catalog-navigation">
+              <a class="site-navigation__link" href="catalog.html">Каталог</a>
+              <ul class="catalog-navigation__modal-window">
+                <li class="catalog-navigation__item">
+                  <a class="catalog-navigation__link--novelty" href="#">Новинки</a>
+                </li>
+                <li class="catalog-navigation__item">
+                  <a class="catalog-navigation__link" href="catalog.html">Сливочное</a>
+                </li>
+                <li class="catalog-navigation__item">
+                  <a class="catalog-navigation__link--active" href="#">Щербеты</a>
+                </li>
+                <li class="catalog-navigation__item">
+                  <a class="catalog-navigation__link" href="#">Фруктовый лед</a>
+                </li>
+                <li class="catalog-navigation__item">
+                  <a class="catalog-navigation__link" href="#">Мелорин</a>
+                </li>
+              </ul>
+            </li>
+            <li class="site-navigation__item">
+              <a class="site-navigation__link" href="#">Доставка и оплата</a>
+            </li>
+            <li class="site-navigation__item">
+              <a class="site-navigation__link" href="#">О Компании</a>
+            </li>
+          </ul>
+          <ul class="user-navigation">
+            <li class="user-navigation__item search">
+              <a class="user-navigation__link icon-before search__link" href="#"></a>
+              <form class="search__form" action="https://echo.htmlacademy.ru" method="post">
+                <label class="visually-hidden" for="search">Поиск по сайту</label>
+                <input class="search__input" id="search" type="search" name="search" placeholder="Что ищем?">
               </form>
-            </section>
-          </li>
-          <li class="user-navigation__item basket">
-            <!-- a question -->
-            <a class="user-navigation__link icon-before basket__link--full" href="">2 товара</a>
-            <section class="basket__modal-window">
-              <h2 class="visually-hidden">Содержимое корзины</h2>
-              <table class="basket-modal-window__table">
-                <tr class="basket-modal-window__item">
-                  <td><a href="#">Удалить из корзины</a></td>
-                  <td>
-                    <img src="img/product-1.png" width="33" height="33" alt="#">
-                    <p>Пломбир с апельсиновым джемом</p>
-                  </td>
-                  <td>1,5 кг х <span>200 руб.</span></td>
-                  <td>300 руб.</td>
-                </tr>
-                <tr class="basket-modal-window__item">
-                  <td><a href="#">Удалить из корзины</a></td>
-                  <td>
-                    <img src="img/product-3.png" width="33" height="33" alt="#">
-                    <p>Клубничный пломбир с присыпкой из белого шоколада</p>
-                  </td>
-                  <td>1,5 кг х <span>300 руб.</span></td>
-                  <td>450 руб.</td>
-                </tr>
-              </table>
-            </section>
-          </li>
-        </ul>
+            </li>
+            <li class="user-navigation__item login">
+              <a class="user-navigation__link icon-before login__link" href="">Вход</a>
+              <section class="login__modal-window">
+                <h2 class="visually-hidden">Личный кабинет</h2>
+                <form class="login__form" action="https://echo.htmlacademy.ru" method="post">
+                  <p>
+                    <label class="visually-hidden" for="user-login">Электронная почта</label>
+                    <input class="login__input" id="user-login" type="text" name="login" placeholder="Электронная почта">
+                  </p>
+                  <p>
+                    <label class="visually-hidden" for="user-password">Пароль</label>
+                    <input class="login__input" id="user-password" type="password" name="password" placeholder="Пароль">
+                  </p>
+                  <a class="login__link" href="#">Забыли пароль?</a>
+                  <a class="login__link" href="#">Новая регистрация</a>
+                  <button class="button" type="submit">Войти</button>
+                </form>
+              </section>
+            </li>
+            <li class="user-navigation__item basket">
+              <!-- a question -->
+              <a class="user-navigation__link icon-before basket__link--full" href="">2 товара</a>
+              <section class="basket__modal-window">
+                <h2 class="visually-hidden">Содержимое корзины</h2>
+                <table class="basket-modal-window__table">
+                  <tr class="basket-modal-window__item">
+                    <td><a href="#">Удалить из корзины</a></td>
+                    <td>
+                      <img src="img/product-1.png" width="33" height="33" alt="#">
+                      <p>Пломбир с апельсиновым джемом</p>
+                    </td>
+                    <td>1,5 кг х <span>200 руб.</span></td>
+                    <td>300 руб.</td>
+                  </tr>
+                  <tr class="basket-modal-window__item">
+                    <td><a href="#">Удалить из корзины</a></td>
+                    <td>
+                      <img src="img/product-3.png" width="33" height="33" alt="#">
+                      <p>Клубничный пломбир с присыпкой из белого шоколада</p>
+                    </td>
+                    <td>1,5 кг х <span>300 руб.</span></td>
+                    <td>450 руб.</td>
+                  </tr>
+                </table>
+              </section>
+            </li>
+          </ul>
+      </div>
       </nav>
-      <p class="main-header__info header-info">
+      <p class="container main-header__info header-info">
         <span class="header-info__hours">С 10 до 20, ежедневно</span>
         <a class="header-info__phone" href="tel:+78124502525">8 812 450-25-25</a>
       </p>
