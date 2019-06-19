@@ -284,24 +284,13 @@
           </li>
         </ul>
         <ul class="catalog__pagination pagination">
-          <li>
-            <a class="pagination__item pagination__item--current" href="#">1</a>
-          </li>
-          <li>
-            <a class="pagination__item" href="#">2</a>
-          </li>
-          <li>
-            <a class="pagination__item" href="#">3</a>
-          </li>
-          <li>
-            <a class="pagination__item" href="#">4</a>
-          </li>
-          <li>
-            <a class="pagination__item" href="#">5</a>
-          </li>
-          <li>
-            <a class="pagination__item pagination__item--next" href="#">Следующая</a>
-          </li>
+          <li class="pagination__item"><a class="pagination__link" aria-label="previous-catalog-list"></a></li>
+          <li class="pagination__item"><a class="pagination__link pagination__link--current">1</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#">5</a></li>
+          <li class="pagination__item"><a class="pagination__link pagination__link--next" href="#" aria-label="next-catalog-list"></a></li>
         </ul>
       </section>
     </main>
@@ -321,8 +310,8 @@
         </li>
       </ul>
       <ul class="main-footer__additional additional-info">
-        <li class="additional-info__item additional-info__item--active">
-          <a class="icon-before additional-info__link additional-info__link--heart" href="#">Для поставщиков</a>
+        <li class="additional-info__item additional-info__item--heart">
+          <a class="icon-before additional-info__link" href="#">Для поставщиков</a>
         </li>
         <li class="additional-info__item">
           <a class="additional-info__link"  href="#">О производстве</a>
@@ -334,7 +323,12 @@
           <a class="additional-info__link"  href="#">Экологические стандарты</a>
         </li>
       </ul>
-        <a class="icon-before main-footer__copyright copyright"  href="https://htmlacademy.ru/intensive/htmlcss">Сделано в <span>HTML Academy</span>  &#169; 2019</a>
+      <div class="main-footer__copyright copyright">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">
+          <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Academy">
+        </a>
+        <p class="copyright__text">Сделано в <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &#169; 2019</p>
+      </div>
     </footer>
   </body>
 </html>
