@@ -91,21 +91,21 @@
             <label class="controls__item controls__item--2" for="slider-button-2">Второй</label>
             <label class="controls__item controls__item--3" for="slider-button-3">Третий</label>
           </div>
+          <ul class="slider__list">
+            <li class="slider__item">
+              <p class="slider__lead">Крем-брюле и пломбир с малиновым джемом</p>
+              <a class="button slider__button" href="#">Давайте оба!</a>
+            </li>
+            <li class="slider__item">
+              <p class="slider__lead">Щоколадный пломбир и лимонный сорбет</p>
+              <a class="button slider__button" href="#">Давайте оба!</a>
+            </li>
+            <li class="slider__item">
+              <p class="slider__lead slider__lead--3">Пломбир с помадкой и клубничный щербет</p>
+              <a class="button slider__button" href="#">Давайте оба!</a>
+            </li>
+          </ul>
         </div>
-        <ul class="slider__list">
-          <li class="slider__item">
-            <p>Крем-брюле и пломбир с малиновым джемом</p>
-            <a class="button slider__button" href="#">Давайте оба!</a>
-          </li>
-          <li class="slider__item">
-            <p>Щоколадный пломбир и лимонный сорбет</p>
-            <a class="button slider__button" href="#">Давайте оба!</a>
-          </li>
-          <li class="slider__item">
-            <p>Пломбир с помадкой и клубничный щербет</p>
-            <a class="button slider__button" href="#">Давайте оба!</a>
-          </li>
-        </ul>
       </section>
       <section class="container page-main__promotions promotions">
         <h2 class="visually-hidden">Промо акции</h2>
@@ -177,8 +177,10 @@
       </section>
       <div class="container add-columns">
         <article class="page-main__blog blog">
-          <h2>Новое в нашем блоге</h2>
-          <a class="blog-topic" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+          <div class="blog__wrapper">
+            <h2>Новое в нашем блоге</h2>
+            <a class="blog-topic" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+          </div>
         </article >
 
         <section class="page-main__subscription subscription">
@@ -191,11 +193,11 @@
           </form>
         </section>
       </div>
-      <section class="page-main__contacts contacts">
+      <section class="container page-main__contacts contacts">
         <h2 class="visually-hidden">Контакты</h2>
         <img class="map-img" src="img/map.jpg" width="1250" height="430" alt="Адрес офлайн магазина: город Санкт-Петербург, улица Большая Конюшенная 19/8">
         <div class="map-yandex">
-          <iframe class="map-yandex" src="https://yandex.ru/map-widget/v1/-/CBRWz6CBxC"></iframe>
+          <iframe src="https://yandex.ru/map-widget/v1/-/CBRWz6CBxC"></iframe>
         </div>
         <div class="contacts__window">
           <h3>Адрес главного офиса и офлайн-магазина:</h3>

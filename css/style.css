@@ -139,10 +139,6 @@ img {
   display: none;
 }
 
-.page-main__slider {
-  display: none;
-}
-
 .site-navigation {
   line-height: 18px;
   font-weight: 700;
@@ -228,6 +224,10 @@ img {
   line-height: 28px;
 }
 
+.page-main__breadcrumbs {
+  display: flex;
+}
+
 .breadcrumbs {
   font-size: 14px;
   line-height: 16px;
@@ -284,7 +284,6 @@ img {
 .main-header__navigation {
   flex-direction: row;
   align-items: center;
-  flex-wrap: wrap;
   width: 1146px;
   margin-top: 10px;
 }
@@ -330,20 +329,140 @@ img {
   justify-content: space-between;
   align-items: flex-end;
 
-  padding: 0;
-  /* временно, пока нет слайдера */
-  margin-bottom: 50px;
-  width: 100%;
+  position: absolute;
+  top: 80px;
+
 }
 
+/* Слайдер */
+
 .page-main__slider {
+  display: block;
+  position: relative;
+
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
   margin-bottom: 40px;
 
-  /* временно для сетки */
-  min-height: 209px;
+  text-align: center;
+}
+
+.slider__controls {
+  position: absolute;
+  top: 556px;
+  left: 27px;
+  z-index: 100;
+
+  font-size: 0;
+}
+
+.slider__controls label {
+  position: relative;
+  display: inline-block;
+
+  vertical-align: top;
+
+  width: 21px;
+  height: 21px;
+
+  margin-right: 8px;
+
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.slider__controls label:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+#slider-button-1:checked ~ .slider__controls label[for="slider-button-1"],
+#slider-button-2:checked ~ .slider__controls label[for="slider-button-2"],
+#slider-button-3:checked ~ .slider__controls label[for="slider-button-3"] {
+  background-color: #ffffff;
+}
+
+.slider__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.slider__item {
+  display: none;
+  position: relative;
+
+  width: 1200px;
+  min-height: 665px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.slider__item:nth-child(1) {
+  background-image: url(../img/slider-1.png);
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+}
+
+.slider__item:nth-child(2) {
+  background-image: url(../img/slider-2.png);
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+}
+
+.slider__item:nth-child(3) {
+  background-image: url(../img/slider-3.png);
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+}
+
+.slider-button--first:checked ~ .slider__list .slider__item:nth-child(1) {
+    display: block;
+}
+
+.slider-button--second:checked ~ .slider__list .slider__item:nth-child(2) {
+    display: block;
+}
+
+.slider-button--third:checked ~ .slider__list .slider__item:nth-child(3) {
+    display: block;
+}
+
+.slider__lead {
+  position: absolute;
+  top: 390px;
+  left: 260px;
+
+  margin: 0 auto;
+  margin-bottom: 33px;
+  padding: 0;
+  font-size: 60px;
+  line-height: 60.35px;
+  font-weight: 700;
+
+  width: 675px;
+}
+
+.slider__button {
+  position: absolute;
+  top: 535px;
+  left: 450px;
+}
+
+.slider__lead--1 {
+  width: 650px;
 }
 
 /* Промоакции */
+
+.promotions {
+  margin-top: -55px;
+  position: relative;
+}
 
 .promotions__list {
   display: flex;
@@ -426,6 +545,8 @@ img {
 }
 
 .bestsellers__item h3 {
+  display: inline;
+
   border-bottom: 1px solid #ffffff;
 }
 
@@ -562,6 +683,12 @@ img {
   margin-bottom: 40px;
 }
 
+.blog__wrapper {
+  display: inline-block;
+
+  max-width: 285px;
+}
+
 .blog {
   padding: 22px 20px;
   color: #323232;
@@ -582,7 +709,7 @@ img {
 }
 
 .blog-topic {
-  display: inline-block;
+  display: inline;
 
   width: 282px;
 
@@ -590,8 +717,8 @@ img {
   line-height: 30px;
   color: inherit;
   font-weight: 700;
-  text-decoration: underline;
   vertical-align: top;
+  border-bottom: 2px solid #000000;
 }
 
 .blog-topic:hover,
@@ -675,11 +802,13 @@ img {
 
 .contacts iframe {
   border: 0;
-  width: 1440px;
+  width: 1400px;
   height: 430px;
 }
 
 .contacts {
+  padding: 0;
+
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -697,7 +826,7 @@ img {
   display: block;
   position: absolute;
   top: 60px;
-  right: 27px;
+  right: 15px;
   padding-top: 30px;
   padding-bottom: 26px;
   padding-left: 25px;
@@ -829,7 +958,7 @@ img {
   margin-top: 10px;
   padding-bottom: 25px;
 
-  width:1146px;
+  width: 1200px;
 }
 
 .main-footer__social {
@@ -948,7 +1077,6 @@ img {
   flex-wrap: wrap;
 
   margin-left: auto;
-  max-width: 267px;
 }
 
 .copyright {
@@ -967,6 +1095,7 @@ img {
   margin: 0;
   padding: 0;
   margin-top: 1px;
+  /* margin-left: 77px; */
 }
 
 .copyright__link:last-child:hover,
